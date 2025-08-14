@@ -1,29 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Site — About</title>
-  <meta name="description" content="Learn more about us." />
-  <link rel="icon" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Sytaak</title>
+    <meta name="description" content="Learn more about Sytaak, the AI-powered e-commerce website builder with advanced features beyond Shopify.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        dark: '#111827',
+                        gold: '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="logo">MySite</a>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <h1>About Us</h1>
-    <p>Paste your About content here.</p>
-  </main>
-  <footer class="site-footer"><p>© <span id="year"></span> MySite.</p></footer>
-  <script src="assets/js/main.js"></script>
+<body class="font-sans bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary">
+                    <span class="text-dark">Sytaak</span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-primary font-medium">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary transition">Features</a>
+                <a href="pricing.html" class="text-gray-600 hover:text-primary transition">Pricing</a>
+                <a href="contact.html" class="text-gray-600 hover:text-primary transition">Contact</a>
+            </nav>
+            
+            <div class="hidden md:block">
+                <a href="pricing.html" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+                <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                <a href="about.html" class="text-primary font-medium">About</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary transition">Features</a>
+                <a href="pricing.html" class="text-gray-600 hover:text-primary transition">Pricing</a>
+                <a href="contact.html" class="text-gray-600 hover:text-primary transition">Contact</a>
+                <a href="pricing.html" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition text-center">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-blue-600 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">About Sytaak</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">The future of AI-powered e-commerce is here. Discover what makes us different.</p>
+        </div>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="assets/img/mission.jpg" alt="Our Mission" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Our Mission</h2>
+                    <p class="text-gray-600 mb-6">At Sytaak, we're revolutionizing e-commerce by empowering store owners with cutting-edge AI automation and design tools. Our mission is to make professional online selling accessible to everyone, regardless of technical skills.</p>
+                    <p class="text-gray-600 mb-6">We believe AI should handle the heavy lifting - from store setup to product descriptions, marketing automation to customer service - so you can focus on what truly matters: growing your business.</p>
+                    <div class="flex items-center space-x-4">
+                        <div class="bg-primary bg-opacity-10 p-3 rounded-full">
+                            <i class="fas fa-bolt text-primary text-xl"></i>
+                        </div>
+                        <p class="text-gray-600">AI-powered automation that saves you hours every day</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Story</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline -->
+                    <div class="border-l-2 border-primary absolute h-full left-4 md:left-1/2 -ml-1"></div>
+                    
+                    <!-- Timeline items -->
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h3 class="font-bold text-xl text-dark">2019 - The Idea</h3>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <p class="text-gray-600">Our founder recognized the growing complexity of e-commerce platforms and saw an opportunity to simplify store creation using emerging AI technologies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h3 class="font-bold text-xl text-dark">2020 - First Prototype</h3>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <p class="text-gray-600">After a year of research and development, we built our first AI-powered store builder that could create complete Shopify stores in under 10 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h3 class="font-bold text-xl text-dark">2021 - Beta Launch</h3>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <p class="text-gray-600">We launched our beta to select users who helped us refine the platform, resulting in a 92% satisfaction rate from early adopters.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h3 class="font-bold text-xl text-dark">2022 - Public Release</h3>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <p class="text-gray-600">Sytaak officially launched to the public, offering features that surpassed traditional platforms at a fraction of the cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-primary border-4 border-white z-10"></div>
+                            <div class="md:w-5/12 md:pr-8 md:text-right">
+                                <h3 class="font-bold text-xl text-dark">2023 - Today</h3>
+                            </div>
+                            <div class="md:w-5/12 md:pl-8 mt-4 md:mt-0">
+                                <p class="text-gray-600">With thousands of happy customers, we continue to innovate, adding new AI features monthly to keep our users ahead of the competition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Advantages -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Our Advantages</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Why Sytaak outperforms traditional platforms like Shopify</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">AI-Powered Automation</h3>
+                    <p class="text-gray-600">Our AI handles store setup, product descriptions, SEO optimization, and even customer service, saving you countless hours.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-bolt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Lightning Fast Setup</h3>
+                    <p class="text-gray-600">Launch a complete, polished store in minutes instead of days. Our AI learns from your inputs to create the perfect store.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-dollar-sign text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Cost Effective</h3>
+                    <p class="text-gray-600">Get premium features at a fraction of Shopify's cost. No expensive apps or developers needed.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Built-In Marketing</h3>
+                    <p class="text-gray-600">AI-generated email campaigns, social media posts, and ads that convert - all managed from one dashboard.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">Mobile First</h3>
+                    <p class="text-gray-600">Stores optimized perfectly for mobile shoppers, who make up over 70% of e-commerce traffic.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition">
+                    <div class="text-gold mb-4">
+                        <i class="fas fa-headset text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">24/7 Support</h3>
+                    <p class="text-gray-600">Real human support whenever you need it, plus our AI assistant available around the clock.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team & Vision -->
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-dark mb-6">Team & Vision</h2>
+                    <p class="text-gray-600 mb-6">Our diverse team of AI experts, e-commerce veterans, and UX designers came together with a shared vision: to democratize online selling by removing technical barriers.</p>
+                    <p class="text-gray-600 mb-6">We're constantly pushing boundaries, with monthly feature updates that keep our platform at the forefront of e-commerce technology. Our roadmap includes:</p>
+                    <ul class="text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold mr-2 mt-1"></i>
+                            <span>AI-generated video product showcases</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold mr-2 mt-1"></i>
+                            <span>Voice commerce integration</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold mr-2 mt-1"></i>
+                            <span>Predictive inventory management</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-gold mr-2 mt-1"></i>
+                            <span>Augmented reality product previews</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <img src="assets/img/team1.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                            <h4 class="font-bold text-dark">Sarah Chen</h4>
+                            <p class="text-gray-600 text-sm">AI Research Lead</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <img src="assets/img/team2.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                            <h4 class="font-bold text-dark">Michael Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Product Design</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <img src="assets/img/team3.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                            <h4 class="font-bold text-dark">David Kim</h4>
+                            <p class="text-gray-600 text-sm">E-commerce Expert</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                            <img src="assets/img/team4.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+                            <h4 class="font-bold text-dark">Priya Patel</h4>
+                            <p class="text-gray-600 text-sm">Customer Success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your E-commerce Business?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of store owners who are saving time and growing faster with Sytaak</p>
+            <div class="bg-white text-dark rounded-lg p-8 max-w-2xl mx-auto shadow-xl">
+                <h3 class="text-2xl font-bold mb-4">Start Your 120-Day Trial for Just $0.75</h3>
+                <p class="text-gray-600 mb-6">Experience the full power of our platform with no risk. Cancel anytime.</p>
+                <a href="pricing.html" class="inline-block bg-gold text-white px-8 py-3 rounded-lg font-bold hover:bg-yellow-600 transition">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Sytaak</h3>
+                    <p class="text-gray-400">The AI-powered e-commerce platform that builds your store, markets your products, and grows your business.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="text-gray-400 hover:text-white transition">Pricing</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Features</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">AI Store Builder</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Marketing Automation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Product Descriptions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">SEO Optimization</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Customer Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">hello@Sytaak</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gray-400 mr-2"></i>
+                            <span class="text-gray-400">San Francisco, CA</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Sytaak. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>

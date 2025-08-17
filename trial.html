@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start Sytaak for $0.75/month with multiple signup options.">
+    <title>Start Trial — Sytaak</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-sans antialiased text-[#111827] bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-[#111827]">Sytaak</a>
+            <ul class="flex space-x-6">
+                <li><a href="index.html" class="text-[#111827] hover:text-[#2563eb] transition duration-200">Home</a></li>
+                <li><a href="about.html" class="text-[#111827] hover:text-[#2563eb] transition duration-200">About</a></li>
+                <li><a href="features.html" class="text-[#111827] hover:text-[#2563eb] transition duration-200">Features</a></li>
+                <li><a href="pricing.html" class="text-[#111827] hover:text-[#2563eb] transition duration-200">Pricing</a></li>
+                <li><a href="contact.html" class="text-[#111827] hover:text-[#2563eb] transition duration-200">Contact</a></li>
+                <li><a href="trial.html" class="text-[#2563eb] font-semibold">Start Trial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- 1. Hero Section -->
+        <section class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold text-[#111827] mb-4 md:text-6xl">Start for <span class="text-[#2563eb]">$0.75/month</span></h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8 md:text-xl">Unlock powerful AI tools and analytics for your business. Get started with our limited-time promotional offer today!</p>
+            <a href="#signup-options" class="btn bg-[#2563eb] text-white py-3 px-8 rounded-lg shadow-md hover:bg-blue-700 transition duration-300 font-semibold text-lg">Sign Up Now</a>
+        </section>
+
+        <!-- 2. Signup Options Section -->
+        <section id="signup-options" class="bg-white rounded-lg shadow-xl p-8 mb-16 max-w-md mx-auto">
+            <h2 class="text-3xl font-bold text-[#111827] mb-8 text-center">Join Sytaak Today</h2>
+
+            <!-- Email Signup Form -->
+            <form action="/api/auth/signup" method="POST" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                    <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2563eb] focus:border-[#2563eb] outline-none" placeholder="John Doe">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2563eb] focus:border-[#2563eb] outline-none" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-[#2563eb] focus:border-[#2563eb] outline-none" placeholder="********">
+                </div>
+                <button type="submit" class="btn w-full bg-[#2563eb] text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Create Account</button>
+            </form>
+
+            <div class="mt-8 text-center text-gray-600">
+                Already have an account? <a href="/api/auth/login" class="text-[#2563eb] hover:underline">Log in here</a>
+            </div>
+
+            <div class="relative flex py-5 items-center">
+                <div class="flex-grow border-t border-gray-300"></div>
+                <span class="flex-shrink mx-4 text-gray-400">Or continue with</span>
+                <div class="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <div class="space-y-4">
+                <a href="/api/auth/google" class="btn-outline w-full flex items-center justify-center border border-gray-300 rounded-lg py-3 px-4 text-gray-700 hover:bg-gray-50 transition duration-300 font-semibold">
+                    <img src="assets/img/google-icon.svg" alt="Google icon" class="w-5 h-5 mr-3">
+                    Continue with Google
+                </a>
+                <a href="/api/auth/github" class="btn-outline w-full flex items-center justify-center border border-gray-300 rounded-lg py-3 px-4 text-gray-700 hover:bg-gray-50 transition duration-300 font-semibold">
+                    <img src="assets/img/github-icon.svg" alt="GitHub icon" class="w-5 h-5 mr-3">
+                    Continue with GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Billing Start Section -->
+        <section class="text-center mb-16 p-8 bg-white rounded-lg shadow-xl max-w-2xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#111827] mb-4">Activate Your Sytaak Promo</h2>
+            <p class="text-lg text-gray-600 mb-8">Ready to get started? Click the button below to activate your special $0.75/month promotional plan.</p>
+            <button type="button" class="btn bg-[#f59e0b] text-white py-4 px-10 rounded-lg shadow-md text-xl font-semibold hover:bg-amber-600 transition duration-300" onclick="window.startBilling()">Activate $0.75/mo</button>
+        </section>
+
+        <!-- 4. What you get Section -->
+        <section class="bg-gray-50 p-8 rounded-lg mb-16">
+            <h2 class="text-3xl font-bold text-[#111827] mb-8 text-center">What You'll Get with Sytaak</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center max-w-4xl mx-auto">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="assets/img/ai-builder-icon.svg" alt="AI Builder Icon" class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">Advanced AI Builder</h3>
+                    <p class="text-gray-600">Craft intelligent solutions with our intuitive AI model builder, designed for rapid development.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="assets/img/analytics-icon.svg" alt="Analytics Icon" class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">Comprehensive Analytics</h3>
+                    <p class="text-gray-600">Gain deep insights into your performance with detailed, real-time analytics dashboards.</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <img src="assets/img/integrations-icon.svg" alt="Integrations Icon" class="mx-auto mb-4 w-16 h-16">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">Seamless Integrations</h3>
+                    <p class="text-gray-600">Connect effortlessly with your favorite tools and platforms using our robust integration suite.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. FAQ Section -->
+        <section class="mb-16 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold text-[#111827] mb-8 text-center">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">What does "$0.75 per month" mean?</h3>
+                    <p class="text-gray-700">This is a special promotional rate for new users, valid for your first three months. After the promotional period, your plan will automatically transition to our regular pricing tiers based on your usage and chosen plan.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">What are the regular pricing plans after the promo ends?</h3>
+                    <p class="text-gray-700">Once the $0.75/month promotional period concludes, you can choose from our standard plans:</p>
+                    <ul class="list-disc list-inside mt-2 text-gray-700 pl-4">
+                        <li><strong>Basic:</strong> $9.90 per month</li>
+                        <li><strong>Advanced:</strong> $19.90 per month</li>
+                        <li><strong>Premium:</strong> $29.90 per month</li>
+                    </ul>
+                    <p class="text-gray-700 mt-2">Details on features included in each plan are available on our <a href="pricing.html" class="text-[#2563eb] hover:underline">Pricing page</a>.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-[#111827] mb-2">Can I cancel anytime?</h3>
+                    <p class="text-gray-700">Yes, you can cancel your subscription at any time directly from your account dashboard. There are no long-term contracts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-white py-8 text-center">
+        <p>&copy; 2023 Sytaak. All rights reserved.</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
